@@ -38,7 +38,7 @@ public class TasksController : ControllerBase
         {
             Title = request.Title,
             Description = request.Description,
-            Status = request.Status ?? TaskStatus.Todo,
+            Status = request.Status ?? TaskStatusInfo.Todo,
             DueDate = request.DueDate,
             CreatedAt = DateTime.UtcNow,
             UpdatedAt = DateTime.UtcNow
@@ -160,7 +160,7 @@ public class CreateTaskRequest
 {
     public string Title { get; set; } = string.Empty;
     public string? Description { get; set; }
-    public TaskStatus? Status { get; set; }
+    public TaskStatusInfo? Status { get; set; }
     public DateTime? DueDate { get; set; }
 }
 
@@ -168,7 +168,7 @@ public class UpdateTaskRequest
 {
     public string Title { get; set; } = string.Empty;
     public string? Description { get; set; }
-    public TaskStatus? Status { get; set; }
+    public TaskStatusInfo? Status { get; set; }
     public DateTime? DueDate { get; set; }
 }
 

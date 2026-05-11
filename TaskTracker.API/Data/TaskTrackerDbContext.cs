@@ -31,7 +31,7 @@ public class TaskTrackerDbContext : DbContext
 
             entity.Property(e => e.Status)
                 .HasConversion<int>()
-                .HasDefaultValue(TaskStatus.Todo);
+                .HasDefaultValue(TaskStatusInfo.Todo);
 
             entity.Property(e => e.DueDate)
                 .IsRequired(false);

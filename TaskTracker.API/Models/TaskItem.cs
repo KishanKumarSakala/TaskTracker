@@ -13,7 +13,7 @@ public class TaskItem
     public string? Description { get; set; }
 
     [Required]
-    public TaskStatus Status { get; set; } = TaskStatus.Todo;
+    public TaskStatusInfo Status { get; set; } = TaskStatusInfo.Todo;
 
     public DateTime? DueDate { get; set; }
 
@@ -22,7 +22,7 @@ public class TaskItem
     public DateTime UpdatedAt { get; set; }
 }
 
-public enum TaskStatus
+public enum TaskStatusInfo
 {
     Todo = 0,
     InProgress = 1,

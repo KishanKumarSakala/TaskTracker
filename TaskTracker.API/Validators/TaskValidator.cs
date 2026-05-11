@@ -38,7 +38,7 @@ public static class TaskValidator
         }
 
         // Validate Done Status Rule
-        if (request.Status == TaskStatus.Done && string.IsNullOrWhiteSpace(request.Title))
+        if (request.Status == TaskStatusInfo.Done && string.IsNullOrWhiteSpace(request.Title))
         {
             result.Errors.Add("A task cannot be marked as Done if the Title is empty or whitespace");
             result.IsValid = false;
@@ -74,7 +74,7 @@ public static class TaskValidator
         }
 
         // Validate Done Status Rule
-        if (request.Status == TaskStatus.Done && string.IsNullOrWhiteSpace(request.Title))
+        if (request.Status == TaskStatusInfo.Done && string.IsNullOrWhiteSpace(request.Title))
         {
             result.Errors.Add("A task cannot be marked as Done if the Title is empty or whitespace");
             result.IsValid = false;
